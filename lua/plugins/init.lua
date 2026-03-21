@@ -17,18 +17,21 @@ return {
   -- { import = "nvchad.blink.lazyspec" },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim", "lua", "vimdoc",
-       "html", "css"
-  		},
-  	},
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+      },
+    },
   },
 
   {
     "github/copilot.vim",
-    lazy = false,   -- ensure it's loaded on startup
+    lazy = false, -- ensure it's loaded on startup
     config = function()
       -- Disable default Tab mapping so it doesn’t conflict with NvChad
       vim.g.copilot_no_tab_map = true
@@ -39,5 +42,24 @@ return {
     "preservim/tagbar",
     lazy = false,
   },
-
+  {
+    "yetone/avante.nvim",
+    lazy = false,
+    --event = "VeryLazy",
+    build = "make",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+    },
+    opts = {
+      provider = "claude",
+      providers = {
+        claude = {
+          model = "claude-sonnet-3-5-sonnet-latest",
+        },
+      },
+    },
+  },
 }
