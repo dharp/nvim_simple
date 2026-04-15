@@ -54,7 +54,7 @@ return {
       provider = "claude",
       providers = {
         claude = {
-          model = "claude-sonnet-4-20250514",
+          model = "claude-opus-4-6",
         },
       },
     },
