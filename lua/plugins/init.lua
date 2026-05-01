@@ -42,7 +42,6 @@ return {
   -- {
   --   "yetone/avante.nvim",
   --   lazy = false,
-  --   --event = "VeryLazy",
   --   build = "make",
   --   dependencies = {
   --     "nvim-treesitter/nvim-treesitter",
@@ -53,8 +52,8 @@ return {
   --     provider = "claude",
   --     providers = {
   --       claude = {
-  --         auth_type = "max",
   --         model = "claude-sonnet-4-6",
+  --         api_key_name = "ANTHROPIC_API_KEY",
   --       },
   --     },
   --   },
