@@ -1,3 +1,6 @@
+-- Avoid leader key not working
+vim.o.timeoutlen = 500 -- Adjust this value (default is usually 1000)
+
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
